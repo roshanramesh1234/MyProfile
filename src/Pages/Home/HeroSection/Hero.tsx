@@ -2,7 +2,7 @@ import myPic from "/src/assets/me.png";
 import "./Hero.tsx.css";
 import SkillsComponent from "./SkillsComponent";
 import Quote from "./Quote";
-import EnterButton from "/src/Elements/EnterButton";
+import EnterButton from "../../../Elements/EnterButton";
 import { useRef } from "react";
 import blazor from "/src/assets/skills/blazor.png";
 import docker from "/src/assets/skills/docker.png";

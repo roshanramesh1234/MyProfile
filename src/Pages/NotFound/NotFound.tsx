@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import notFound from "/src/assets/animations/not-found.json";
+import notFound from "../../assets/animations/not-found.json";
 import "./NotFound.css";
 
 export default function NotFound() {

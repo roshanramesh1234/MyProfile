@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import underConstruction from "/src/assets/animations/under-construction.json";
+import underConstruction from "../../assets/animations/under-construction.json";
 import "./UnderConstruction.css";
 export default function UnderConstruction() {
 	return (
