@@ -1,0 +1,12 @@
+.under-construction {
+	display: flex;
+	flex-direction: column;
+	padding: 100px 50px;
+	justify-content: center;
+	align-items: center;
+	height: 100dvh;
+	box-sizing: border-box;
+}
+.animation {
+	height: 80%;
+}

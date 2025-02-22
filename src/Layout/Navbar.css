@@ -4,7 +4,6 @@ nav {
 	align-items: center;
 	padding: 10px 50px;
 	box-sizing: border-box;
-	border-bottom: 1px solid var(--text1);
 	background-color: var(--bg2);
 	color: var(--text1);
 	box-shadow: var(--shadow-dark);
@@ -12,16 +11,49 @@ nav {
 	width: 100%;
 	z-index: 10;
 }
+nav::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--text1);
+	transition: all 0.3s ease-in-out;
+}
+nav:hover::after {
+	width: 100%;
+}
 .nav-brand {
 	font-size: 1.8rem;
 	font-weight: 600;
 	color: var(--text1);
 	font-family: "Grechen Fuemen", serif;
 }
+.nav-brand:hover {
+	color: var(--text1);
+}
 .nav-links {
 	display: flex;
 	gap: 25px;
+	padding: 10px;
+	box-sizing: border-box;
 }
 .nav-links a {
 	color: var(--text1);
+	font-size: 1.3rem;
+	position: relative;
+}
+.nav-links a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 2px;
+	background-color: currentColor; /* Uses the text color */
+	transition: width 0.3s ease-in-out;
+}
+.nav-links a:hover::after {
+	width: 100%;
 }

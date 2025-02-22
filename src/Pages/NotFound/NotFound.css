@@ -1,0 +1,15 @@
+.not-found {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+	padding: 120px 50px 80px 50px;
+	box-sizing: border-box;
+	gap: 25px;
+}
+.animation {
+	height: 80%;
+	border-radius: 25px;
+	overflow: clip;
+}

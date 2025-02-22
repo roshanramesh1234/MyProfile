@@ -12,7 +12,6 @@ function Home() {
 				<Projects />
 				<Clients />
 			</div>
-			;
 		</>
 	);
 }
