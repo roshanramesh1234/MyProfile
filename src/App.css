@@ -3,14 +3,67 @@
 	--bg1: #121212;
 	--bg2: #1c1c1c;
 	--text1: #eaeaea;
+	--shadow-dark: -2px 2px 2px rgba(255, 255, 255, 0.3);
 	background-color: var(--bg1);
+	color: var(--text1);
+	font-family: "Charm", serif;
+	font-weight: 400;
+	font-style: normal;
 }
+/* Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+	width: 6px; /* Width of the scrollbar */
+	height: 6px; /* Height for horizontal scrollbars */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--text1); /* Light gray background */
+	border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(
+		135deg,
+		var(--bg1),
+		var(--accent1)
+	); /* Gradient color */
+	border-radius: 10px; /* Rounded edges */
+	transition: background 0.3s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(60deg, var(--accent1), var(--bg2));
+}
+
 body {
 	margin: 0;
 }
 #root {
 	width: 100%;
 	min-height: 100dvh;
+}
+input,
+textarea {
+	height: 6px;
+	flex-grow: 1;
+	padding: 25px 15px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	background: var(--text1);
+	color: var(--bg1);
+	font-size: 1.2rem;
+	box-shadow: var(--shadow-dark);
+	border: none;
+	outline: none;
+}
+input.invalid {
+	border-bottom: 1.5px solid red;
+}
+textarea {
+	min-height: 250px;
 }
 button {
 	border-radius: 8px;
@@ -34,6 +87,15 @@ a {
 	font-weight: 500;
 	color: #646cff;
 	text-decoration: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: var(--text1);
 }
 a:hover {
 	color: #535bf2;

@@ -1,0 +1,36 @@
+.contact-section {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	box-sizing: border-box;
+	padding: 50px;
+	padding-top: 100px;
+}
+.contact-form {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+}
+.contact-form form {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.contact-form .form-row {
+	display: flex;
+	gap: 5px;
+	width: 100%;
+}
+.error {
+	color: red;
+	font-size: 0.8rem;
+}
+.form-input {
+	width: auto;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}

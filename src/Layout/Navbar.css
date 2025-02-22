@@ -1,0 +1,27 @@
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 50px;
+	box-sizing: border-box;
+	border-bottom: 1px solid var(--text1);
+	background-color: var(--bg2);
+	color: var(--text1);
+	box-shadow: var(--shadow-dark);
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+.nav-brand {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: var(--text1);
+	font-family: "Grechen Fuemen", serif;
+}
+.nav-links {
+	display: flex;
+	gap: 25px;
+}
+.nav-links a {
+	color: var(--text1);
+}
