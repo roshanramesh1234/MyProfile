@@ -8,10 +8,15 @@
 .hero-section img {
 	height: 100%;
 	float: right;
+	position: relative;
+	z-index: 10;
+	object-fit: cover;
 }
 .hero-section h1 {
-	font-size: 4.2rem;
+	font-size: 5.2rem;
 	font-weight: 700;
+	animation: 1s blurIn linear;
+	transition: all 0.5s ease-in-out;
 }
 .content {
 	height: 100%;
@@ -64,6 +69,20 @@
 	position: relative;
 	width: 100%;
 	display: flex;
+	-webkit-mask-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0),
+		black 20%,
+		black 80%,
+		rgba(0, 0, 0, 0)
+	);
+	mask-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0),
+		black 20%,
+		black 80%,
+		rgba(0, 0, 0, 0)
+	);
 }
 .skills {
 	padding: 25px 0;
@@ -71,6 +90,7 @@
 	box-sizing: border-box;
 	width: fit-content;
 	display: flex;
+	margin-right: 50px;
 }
 .skills img {
 	height: 50px;
@@ -80,23 +100,46 @@
 .skills-container:hover .skills {
 	animation-play-state: paused;
 }
-/* .skills-container::before {
+.hero-skills {
 	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 50px;
-	content: "";
-	background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--accent1));
+	display: flex;
+	flex-direction: column;
+	gap: 75px;
+	justify-content: space-between;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px 0;
+	filter: brightness(0.5) blur(3px);
+	height: 100dvh;
+	overflow: hidden;
 }
+.hero-skills .skills {
+	animation: 30s slide infinite linear;
+}
+.hero-skills .skills img {
+	margin: 0 75px;
+}
+.hero-skills .skills-container {
+	min-height: 150px;
+}
+/* .skills-container::before,
 .skills-container::after {
+	content: "";
 	position: absolute;
-	right: 0;
 	top: 0;
 	height: 100%;
 	width: 50px;
-	content: "";
-	background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--accent1));
+	z-index: 2;
+}
+
+.skills-container::before {
+	left: 0;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.7), transparent);
+}
+
+.skills-container::after {
+	right: 0;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.7), transparent);
 } */
 @keyframes slide {
 	from {
@@ -112,7 +155,7 @@
 	flex-direction: column;
 }
 .quote-container h3 {
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	font-weight: 700;
 }
 #text-top,
@@ -126,7 +169,7 @@
 }
 .typing::after {
 	content: "|";
-	animation: 0.6s typing infinite linear;
+	animation: 0.7s typing infinite linear;
 }
 
 @keyframes typing {
@@ -134,10 +177,25 @@
 		opacity: 0;
 	}
 	50% {
-		opacity: 0.8;
+		opacity: 0.5;
 	}
 	100% {
 		opacity: 1;
+	}
+}
+@keyframes blurIn {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	50% {
+		opacity: 0.5;
+		filter: blur(10px);
+		transform: scale(1.05);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
 	}
 }
 .enter-button-container {

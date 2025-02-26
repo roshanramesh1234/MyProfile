@@ -97,3 +97,6 @@
 	align-items: center;
 	gap: 15px;
 }
+.contributions h4 {
+	color: var(--text2);
+}

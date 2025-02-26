@@ -37,7 +37,9 @@ function Quote() {
 
 		// Ensure typing starts only after the DOM is fully loaded
 		if (document.readyState === "complete") {
-			startTyping();
+			setTimeout(() => {
+				startTyping();
+			}, 1500);
 		} else {
 			window.onload = startTyping;
 		}
