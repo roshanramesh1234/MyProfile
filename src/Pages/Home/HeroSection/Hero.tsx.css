@@ -90,7 +90,6 @@
 	box-sizing: border-box;
 	width: fit-content;
 	display: flex;
-	margin-right: 50px;
 }
 .skills img {
 	height: 50px;

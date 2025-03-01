@@ -1,3 +1,4 @@
+import FadeIn from "../../Effects/FadeIn";
 import About from "./About";
 import Clients from "./Clients";
 import Hero from "./HeroSection/Hero";
@@ -8,9 +9,15 @@ function Home() {
 		<>
 			<div className="home">
 				<Hero />
-				<About />
-				<Projects />
-				<Clients />
+				<FadeIn>
+					<About />
+				</FadeIn>
+				<FadeIn>
+					<Projects />
+				</FadeIn>
+				<FadeIn>
+					<Clients />
+				</FadeIn>
 			</div>
 		</>
 	);

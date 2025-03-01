@@ -21,6 +21,8 @@
 	perspective: 1000px;
 	cursor: pointer;
 	max-width: 450px;
+	transition: box-shadow 0.3s ease-in-out;
+	border-radius: 10px;
 }
 .project-card h4 {
 	font-size: 2rem;
@@ -61,6 +63,7 @@
 	box-sizing: border-box;
 	align-items: center;
 	gap: 25px;
+	box-shadow: 0 0 10px var(--accent1), 0 0 20px var(--accent1);
 }
 .card-front h2 {
 	font-size: 2.5rem;
@@ -75,6 +78,7 @@
 	box-sizing: border-box;
 	text-align: start;
 	justify-content: space-between;
+	box-shadow: 0 0 10px var(--text1), 0 0 20px var(--text1);
 }
 
 .project-card:hover .card-front {

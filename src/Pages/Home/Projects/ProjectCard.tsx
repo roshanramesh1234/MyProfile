@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				{skills && (
 					<div className="contributions">
 						<h4>My Contributions</h4>
-						<Skills images={skills} duplicates={2} />
+						<Skills images={skills} duplicates={3} />
 					</div>
 				)}
 			</div>
