@@ -94,6 +94,8 @@
 .skills img {
 	height: 50px;
 	margin: 0 25px;
+	display: block !important;
+	width: auto !important;
 }
 
 .skills-container:hover .skills {
@@ -200,4 +202,33 @@
 .enter-button-container {
 	width: 50%;
 	position: relative;
+}
+@media screen and (max-width: 1450px) {
+	.hero-section h1 {
+		font-size: 3.8rem;
+	}
+	.quote-container h3 {
+		font-size: 1.8rem;
+	}
+}
+@media screen and (max-width: 1300px) {
+	.hero-section img {
+		width: 45%;
+	}
+	.content {
+		padding: 200px 25px;
+	}
+	.cta-buttons {
+		width: calc(100% - 50px);
+	}
+}
+@media screen and (max-width: 1100px) {
+	.hero-section img {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.hero-section img {
+		display: none;
+	}
 }
